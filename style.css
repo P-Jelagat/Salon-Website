@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    background: linear-gradient(90deg, rgba(0,0,0,0.5), rgb(175, 97, 2)),url(/images/Background.png);
+    background-size: cover;
+    background-position: center;
+
+}
+nav img{
+    height: 30px;
+    width: 30px;
+}
+nav{
+    background: linear-gradient(90deg, white, rgb(175, 97, 2));
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+nav ul{
+    list-style: none;
+}
+.intro{
+    background: linear-gradient(135deg, white, rgb(175, 97, 2));
+    
+}
