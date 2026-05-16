@@ -12,7 +12,12 @@ h2{
     text-decoration: underline;
     margin-left: 10px;
     padding-top: 20px;
+    
 }
+ul li{
+    list-style: none;
+}
+
 .navbar img{
     height: 50px;
     width: 50px;
@@ -50,6 +55,7 @@ h2{
     background-size: cover;
     background-position: right;
     height: 500px;
+    
 
 }
 #description{
@@ -81,21 +87,40 @@ h2{
 #testimonials{
     margin: 20px 10px;
     display: flex;
-    justify-content: space-between;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    
+}
+#testimonials::-webkit-scrollbar{
+    display: none;
 }
 .card{
     background-color: aliceblue;
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 5px;
-    min-height: 200px;
-    max-width: 400px;
-    width: 50%;
+    min-height: 250px;
+    min-width: 200px;
+    flex-shrink: 0;
     border-radius: 20px;
+    scroll-snap-align: center;
+    margin: 10px;
+}
+.card p{
+    margin-top: 15px;
+
+    line-height: 1.7;
+
+    max-width: 65ch;
 }
 #testimonials img{
     height: 100px;
     width: 100px;
     border-radius: 150px;
+    display: block;
+    margin: 0 auto;
 }
 footer{
     height: 150px;
@@ -110,4 +135,24 @@ footer img{
     height: 20px;
     width: 20px;
     
+}
+@media(max-width:600px){
+    .intro{
+        height: 300px;
+}
+.card{
+    min-height: 150px;
+    min-width: 100px;
+
+}
+
+.card p{
+    margin-top: 8px;
+
+    line-height: 1.5;
+
+    max-width: 35ch;
+}
+
+
 }
