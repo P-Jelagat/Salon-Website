@@ -14,6 +14,10 @@ body{
     background: #faf5ed;
 }
 
+.container{
+    position: relative;
+}
+
 /* NAVIGATION SECTION */
 
 .contacts{
@@ -21,6 +25,7 @@ body{
     padding: 5px;
     justify-content: space-between;
     background: #2B203A;
+    position: relative;
 }
 
 .contacts p,
@@ -187,4 +192,73 @@ nav img{
         justify-content: space-between;
         padding: 0 10px;
     }
+}
+
+@media(min-width:1000px){
+    nav{
+        position: fixed;
+        top: 30px;
+        left: 0;
+        right: 0;
+        border: none;
+        transition: 0.3s ease;
+    }
+
+    .links,
+    .links a{
+        color: #faf5ed;
+        border: none;
+    }
+
+    .bookBtn{
+        color: #faf5ed;
+        border-color: #faf5ed;
+    }
+
+    nav.scrolled{
+        top: 0;
+        background: #faf5ed;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #2B203A;
+    }
+
+    .links.scrolled{
+        border: solid 1px #2B203A;
+        border-top: none;
+        border-bottom: none;
+    }
+    .bookBtn.scrolled{
+        color: #2B203A;
+        border: solid 1px #2B203A;
+    }
+
+    .links.scrolled a{
+        color: #2B203A;
+    }
+
+}
+
+
+/* HOME HERO SECTION */
+
+.heroImage {
+    height: 80vh;
+    position: relative;
+}
+
+.heroImage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
 }
