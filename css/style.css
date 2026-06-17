@@ -205,11 +205,12 @@ nav img{
     nav{
         justify-content: space-between;
         padding: 0 10px;
+        border-bottom: 1px solid ;
+        top: 0;
     }
 }
 
 @media(min-width:950px){
-
     .links,
     .links a{
         color: #faf5ed;
@@ -238,6 +239,13 @@ nav img{
 }
 
 /* HOMEPAGE STYLING */
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+
 /* HOME HERO SECTION */
 #homeHero{
     position: relative;
@@ -321,4 +329,136 @@ nav img{
         padding: 1em;
         margin-left: 1em ;
     }
+
 }
+
+/* ABOUT HOME */
+#aboutHome{
+    padding: 2em;
+    margin: 3em;
+    display: flex;
+    gap: 4em;
+}
+
+#imageContents{
+    position: relative;
+    flex: 1;
+}
+
+#aboutHomeImage {
+    height: 70vh;
+    width: 50vw;
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#aboutHomeImage img{
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    position: inherit;
+    z-index: 500;
+}
+
+#imageOverlayA{
+    background: #deb887;
+    /* background: #CFA09D; */
+    height: 70vh;
+    width: 50vw;
+    position: absolute;
+    top: -1em;
+    left: -1.5em; 
+    z-index: 400;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#imageOverlayB{
+    /* background: #d7a67e; */
+    background: #CFA09D;
+    height: 70vh;
+    width: 50vw;
+    position: absolute; 
+    top: -2em;
+    left: -3em;
+    z-index: 300;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#imageOverlayC{
+    background: #d7a67e;
+    /* background: #CFA09D; */
+    height: 70vh;
+    width: 50vw;
+    position: absolute; 
+    top: -3em;
+    left: -4.5em;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#aboutHomeText{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#aboutHomeText h3{
+    font-size: 2em;
+    color: #a17873;
+    text-shadow: 3px 10px 3px #b5b4b4;
+}
+
+#aboutHomeText p{
+    color: #666;
+}
+
+#aboutHomeCTA{
+    padding: 1em;
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+#aboutHomeCTA button{
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    font-size: 1em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+#primary{
+    background: #2B203A;  
+    color: #faf5ed;
+    font-weight: bold;
+}
+
+#generic{
+    background: none;
+}
+
+@media(hover:hover){
+    #primary:hover{
+        transform: scale(1.1);
+    }
+
+    #generic:hover{
+        transform: translateY(-10px);
+    }
+}
+
+@media(max-width:950px){
+    #aboutHome{
+        flex-direction: column;
+    }
+    
+    #imageContents{
+        align-self: center;
+    }
+}
+
