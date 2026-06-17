@@ -457,6 +457,11 @@ main{
 }
 
 @media(max-width:950px){
+
+    #aboutHome{
+        margin: 0;
+    }
+
     #aboutHomeContents{
         flex-direction: column;
     }
@@ -530,11 +535,14 @@ main{
 
 /* FOOTER */
 footer{
-    display: flex;
-    justify-content: space-between;
     background: #352826;
-    padding: 1em;
+}
+
+.footerContents{
+    display: flex;
+    justify-content: space-between;;
     gap: 4em;
+    padding: 1em
 }
 
 footer a,
@@ -572,7 +580,7 @@ footer img{
 }
 
 @media(max-width:950px){
-    footer{
+    .footerContents{
         flex-direction: column;
     }
 }
