@@ -124,7 +124,7 @@ nav img{
     transition: 0.2s ease;
 }
 
-@media(hover: hover){
+@media(hover:hover){
     
     .bookBtn:hover{
         transform: translateY(-5px);
@@ -164,7 +164,7 @@ nav img{
     text-decoration: none;
 }
 
-@media(hover: hover){
+@media(hover:hover){
     #menuLinks a:hover{
         color: #924405;
     }
@@ -194,12 +194,13 @@ nav img{
     }
 }
 
-@media(min-width:1000px){
+@media(min-width:950px){
     nav{
         position: fixed;
         top: 30px;
         left: 0;
         right: 0;
+        z-index: 1000;
         border: none;
         transition: 0.3s ease;
     }
@@ -238,8 +239,11 @@ nav img{
 
 }
 
-
+/* HOMEPAGE STYLING */
 /* HOME HERO SECTION */
+#homeHero{
+    position: relative;
+}
 
 .heroImage {
     height: 80vh;
@@ -261,4 +265,62 @@ nav img{
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5em 1em ;
+    gap: 2em;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+#homeHeroText{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 4px;
+}
+
+#homeHeroText h2{
+    color: #FFF7FA;
+}
+
+#homeHeroText p{
+    color: #FFF7FA;
+}
+
+#homeHeroCTA{
+    
+    padding: 10px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 10px 15px 12px rgba(0, 0, 0, 0.4);
+    color: #f0f8ff;
+    border: 1px solid  #f0f8ff;
+    font-size: 1.3em;
+    transition: 0.25s ease;
+}
+
+@media(hover:hover){
+
+    #homeHeroCTA:hover{
+        transform: translateY(-8px);
+    }
+}
+
+@media(min-width:950px){
+
+    #homeHeroText h2{
+        font-size: 2.5em;
+    }
+
+    #homeHeroText p{
+        font-size: 1em;
+    }
+
+    #homeHeroCTA{
+        width: 250px;
+        padding: 1em;
+        margin-left: 1em ;
+    }
 }
