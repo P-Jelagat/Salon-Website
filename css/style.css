@@ -151,7 +151,7 @@ nav img{
     width: 30vw;
     padding: 0.5em 1em;
     background: #faf5ed;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     z-index: 1200;
@@ -336,6 +336,9 @@ main{
 #aboutHome{
     padding: 2em;
     margin: 3em;
+}
+
+#aboutHomeContents{
     display: flex;
     gap: 4em;
 }
@@ -359,6 +362,7 @@ main{
     border-radius: inherit;
     position: inherit;
     z-index: 500;
+    object-fit: cover;
 }
 
 #imageOverlayA{
@@ -453,7 +457,7 @@ main{
 }
 
 @media(max-width:950px){
-    #aboutHome{
+    #aboutHomeContents{
         flex-direction: column;
     }
     
@@ -462,3 +466,107 @@ main{
     }
 }
 
+/* STATS GRID */
+.statsSlider{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2.5em;
+}
+
+#statsTrack{
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  overflow: hidden;
+  animation: scroll 40s linear infinite;
+}
+
+.statsCard{
+    height: 40vh;
+    width: 40vw;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+@keyframes scroll{
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+
+}
+
+.statsCard img{
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.statsText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    gap: 20px;
+    background: rgba(255,255,255,0.4);
+}
+
+.statsText h4{
+    font-size: 2em;
+    color: #555556;
+    text-shadow: 5px 10px 5px #aaa6a6;
+}
+
+.statsText p{
+    color: #666;
+    text-shadow: 5px 10px 5px #aaa6a6;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    background: #352826;
+    padding: 1em;
+    gap: 4em;
+}
+
+footer a,
+footer p,
+footer h4{
+    color: #cacac9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer h4{
+    font-size: 1.5em;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer img{
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 4px;
+}
+
+.contactInfo,
+.quickLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media(max-width:950px){
+    footer{
+        flex-direction: column;
+    }
+}
