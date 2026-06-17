@@ -565,6 +565,12 @@ footer img{
     gap: 10px;
 }
 
+.copyright{
+    border-top: 1px solid rgb(143, 141, 141);
+    padding: 20px;
+    justify-items: center;
+}
+
 @media(max-width:950px){
     footer{
         flex-direction: column;
