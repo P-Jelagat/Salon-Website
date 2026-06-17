@@ -238,6 +238,8 @@ nav img{
 
 }
 
+
+
 /* HOMEPAGE STYLING */
 
 main{
@@ -488,7 +490,7 @@ main{
 
 .statsCard{
     height: 40vh;
-    width: 40vw;
+    width: fit-content;
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     white-space: nowrap;
@@ -532,6 +534,17 @@ main{
     color: #666;
     text-shadow: 5px 10px 5px #aaa6a6;
 }
+
+@media(max-width:600px){
+    #aboutHomeCTA button{
+        font-size: small;
+    }
+
+    .overlay{
+        padding: 2em 1em;
+    }
+}
+
 
 /* FOOTER */
 footer{
